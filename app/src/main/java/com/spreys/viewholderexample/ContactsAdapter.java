@@ -13,14 +13,17 @@ import com.spreys.viewholderexample.Model.Contact;
 
 import java.util.List;
 
+//TODO Step 4: Update the adapter
 public class ContactsAdapter extends ArrayAdapter<Contact> {
     private List<Contact> contacts;
 
+    //TODO Step 6: Update the constructor
     public ContactsAdapter(Context context, List<Contact> contacts) {
         super(context, -1);
         this.contacts = contacts;
     }
 
+    //TODO Step 7: Override onCreateViewHolder method
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView,
@@ -47,11 +50,15 @@ public class ContactsAdapter extends ArrayAdapter<Contact> {
         return convertView;
     }
 
+    //TODO Step 8: Override onBindViewHolder method
+
+    //TODO Step 9: Modify `getCount()` method
     @Override
     public int getCount() {
         return this.contacts.size();
     }
 
+    //TODO Step 5: Update the ViewHolder
     class ViewHolder {
         private TextView nameTextView;
         private TextView mobileTextView;

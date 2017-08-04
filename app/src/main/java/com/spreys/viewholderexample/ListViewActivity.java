@@ -22,8 +22,13 @@ public class ListViewActivity extends AppCompatActivity {
 
         contacts = MockDataGenerator.getMockContacts(1000);
 
+        //TODO Step 3: Replace ListView with RecyclerView in the Java file
         ListView listView = (ListView) findViewById(R.id.list);
+
+        //TODO Step 10: Attach the new adapter
         listView.setAdapter(new ContactsAdapter(this, contacts));
+
+        //TODO Step 11: Attach a LayoutManager
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
